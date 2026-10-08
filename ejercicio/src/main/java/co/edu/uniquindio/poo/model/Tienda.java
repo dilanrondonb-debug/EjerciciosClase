@@ -134,5 +134,13 @@ public class Tienda {
         }
         return  productosFiltrado;
     }
-    
+    public List<String> obtenerCodigos(){
+        List<String>productosFiltrados = new ArrayList<>();
+        for (Producto p : listaProductos.values()){
+            if (p.getCantidadDisponible()>=10&&p.getCantidadDisponible()<50);
+
+            productosFiltrados.add(p.getCodigo());
+        }
+        return  productosFiltrados;
+    }
 }
