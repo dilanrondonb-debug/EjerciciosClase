@@ -1,10 +1,11 @@
 package co.edu.uniquindio.poo.model;
 
 import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Optional;
 
-public record Factura(String codigo, LocalDate Fecha, double Total, EstadoFactura estado, MetodoPago metodoPago,
+public record Factura(String codigo, LocalDate fecha, double Total, EstadoFactura estado, MetodoPago metodoPago,
                       Cliente cliente, ArrayList<DetalleFactura>listaDetallesFactura, Tienda ownedByTienda) {
 
 
@@ -36,7 +37,6 @@ public record Factura(String codigo, LocalDate Fecha, double Total, EstadoFactur
         return Optional.empty();
 
     }
-
 
 
 }
