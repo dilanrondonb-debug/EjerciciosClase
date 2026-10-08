@@ -125,5 +125,14 @@ public class Tienda {
         }
         return Optional.empty();
     }
+    public List<Producto> obtenerMayorezDiez(){
+        List<Producto> productosFiltrado = new ArrayList<>();
+        for (Producto p : listaProductos.values()){
+            if (p.getCantidadDisponible()>=10){
+                productosFiltrado.add(p);
+            }
+        }
+        return  productosFiltrado;
+    }
     
 }
