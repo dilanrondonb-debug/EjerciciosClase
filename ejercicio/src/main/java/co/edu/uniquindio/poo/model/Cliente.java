@@ -53,4 +53,7 @@ public class Cliente {
     public void setListaFacturas(List<Factura> listaFacturas) {
         this.listaFacturas = listaFacturas;
     }
+    public boolean verificarNombreConR() {
+        return nombreCompleto.startsWith("R");
+    }
 }

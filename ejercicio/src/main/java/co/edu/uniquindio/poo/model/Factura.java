@@ -37,6 +37,11 @@ public record Factura(String codigo, LocalDate fecha, double Total, EstadoFactur
         return Optional.empty();
 
     }
+    public boolean tieneClienteConR() {
+    boolean resultado = false;
+    resultado = cliente.verificarNombreConR();
+    return resultado ;
+    }
 
 
 }

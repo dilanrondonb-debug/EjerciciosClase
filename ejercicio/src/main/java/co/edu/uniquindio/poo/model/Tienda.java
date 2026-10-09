@@ -158,5 +158,16 @@ public class Tienda {
                 }
                 return clientes;
     }
+    public List<Factura> obtenerFacturasClienteConR(){
+        ArrayList<Factura> facturas = new ArrayList<>();
+
+        for(Factura f : listaFacturas){
+            if(f.tieneClienteConR()){
+                facturas.add(f);
+            }
+        }
+        return facturas;
+    }
+
 
 }
