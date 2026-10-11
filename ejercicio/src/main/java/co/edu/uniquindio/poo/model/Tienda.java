@@ -196,22 +196,9 @@ public class Tienda {
         }
         return resultado;
     }
-    public List<Producto>obtenerListaProductosOrdenada(){
-        List<Producto>ordenados=new ArrayList<>(listaProductos.values());
-        for (int i = 0; i < ordenados.size() - 1; i++) {
-            boolean huboIntercambio = false;
-            for (int j = 0; j < ordenados.size() - 1 - i; j++) {
-                if (ordenados.get(j).getValor() > ordenados.get(j + 1).getValor()) {
-                    Producto auxiliar = ordenados.get(j);
-                    ordenados.set(j, ordenados.get(j + 1));
-                    ordenados.set(j + 1, auxiliar);
-                    huboIntercambio = true;
-                }
-            }
-            if (!huboIntercambio) {
-                break;
-            }
-        }
+    public List<Producto> obtenerProductosOrdenadosPorPrecio() {
+        List<Producto> ordenados = new ArrayList<>(listaProductos.values());
+        ordenados.sort(Comparator.comparingDouble(Producto::getValor));
         return ordenados;
     }
 }
