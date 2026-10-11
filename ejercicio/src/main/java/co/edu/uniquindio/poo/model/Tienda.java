@@ -201,4 +201,12 @@ public class Tienda {
         ordenados.sort(Comparator.comparingDouble(Producto::getValor));
         return ordenados;
     }
+    public Optional<Producto>obtenerProductoMasCaro(){
+        Optional<Producto>masCaro=Optional.empty();
+        if(listaProductos.isEmpty()){return Optional.empty();}
+        for(Producto p:listaProductos.values()){
+            if(masCaro.isEmpty()||p.getValor()>masCaro.get().getValor()){masCaro=Optional.of(p);}
+        }
+        return masCaro;
+    }
 }
