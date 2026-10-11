@@ -168,6 +168,12 @@ public class Tienda {
         }
         return facturas;
     }
-
+    public List<Factura> obtenerFacturasCompraIphone(){
+        ArrayList<Factura>facturas=new ArrayList<>();
+        for(Factura f:listaFacturas){
+            if(f.compraIphone()){facturas.add(f);}
+        }
+        return facturas;
+    }
 
 }

@@ -52,4 +52,5 @@ public class Producto {
     public Tienda getOwnedByTienda() {
         return ownedByTienda;
     }
+    public boolean verificarIphone(){return nombre.equalsIgnoreCase("iphone 16 pro max");}
 }

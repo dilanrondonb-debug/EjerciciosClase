@@ -42,6 +42,11 @@ public record Factura(String codigo, LocalDate fecha, double Total, EstadoFactur
     resultado = cliente.verificarNombreConR();
     return resultado ;
     }
-
-
+    public boolean compraIphone(){
+        boolean resultado=false;
+        for(DetalleFactura dF: listaDetallesFactura){
+            if(dF.compraIphone()){return true;}
+        }
+        return false;
+    }
 }

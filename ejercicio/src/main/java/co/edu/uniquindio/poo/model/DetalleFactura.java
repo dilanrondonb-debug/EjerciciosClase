@@ -16,4 +16,9 @@ public class DetalleFactura {
     public double getSubTotal() {return subTotal;}
     public double getPrecioAplicado() {return precioAplicado;}
     public Producto getProducto() {return producto;}
+    boolean compraIphone(){
+        boolean resultado = false;
+        resultado= producto.verificarIphone();
+        return resultado;
+    }
 }
