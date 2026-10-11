@@ -209,4 +209,11 @@ public class Tienda {
         }
         return masCaro;
     }
+    public List<Cliente>clientesDeCiudad(String ciudad){
+        List<Cliente>resultado=new ArrayList<>();
+        for(Cliente c:listaClientes){
+            if(c.getCiudadResidencia().equalsIgnoreCase(ciudad)){resultado.add(c);}
+        }
+        return resultado;
+    }
 }
