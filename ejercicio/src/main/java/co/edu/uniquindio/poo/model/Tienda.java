@@ -189,5 +189,11 @@ public class Tienda {
         }
         return resultado;
     }
-
+    public List<Producto>obtenerProductosEnRangoDePrecio(double min, double max){
+        List<Producto>resultado=new ArrayList<>();
+        for(Producto p:listaProductos.values()){
+            if(p.getValor()>=min&&p.getValor()<=max){resultado.add(p);}
+        }
+        return resultado;
+    }
 }
