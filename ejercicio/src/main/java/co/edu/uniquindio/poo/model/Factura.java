@@ -49,4 +49,7 @@ public record Factura(String codigo, LocalDate fecha, double Total, EstadoFactur
         }
         return false;
     }
+    public boolean verificarClienteJuan(){
+        return cliente.verificarJuan();
+    }
 }

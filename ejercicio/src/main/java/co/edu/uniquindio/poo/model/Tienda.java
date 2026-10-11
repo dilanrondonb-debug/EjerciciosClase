@@ -175,5 +175,12 @@ public class Tienda {
         }
         return facturas;
     }
+    public List<Factura> obtenerCompraNombreJuanProductoIphone(){
+        ArrayList<Factura>facturas=new ArrayList<>();
+        for(Factura f:listaFacturas){
+            if(f.compraIphone()&&f.verificarClienteJuan()){facturas.add(f);}
+        }
+        return facturas;
+    }
 
 }

@@ -56,4 +56,5 @@ public class Cliente {
     public boolean verificarNombreConR() {
         return nombreCompleto.startsWith("R");
     }
+    public boolean verificarJuan(){return nombreCompleto.toLowerCase().startsWith("juan");}
 }
