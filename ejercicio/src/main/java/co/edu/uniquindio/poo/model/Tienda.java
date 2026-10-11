@@ -182,5 +182,12 @@ public class Tienda {
         }
         return facturas;
     }
+    public List<Producto>obtenerProductosDeCategoria(Categoria categoria){
+        List<Producto>resultado=new ArrayList<>();
+        for(Producto p:listaProductos.values()){
+            if(p.getCategoria().equals(categoria)){resultado.add(p);}
+        }
+        return resultado;
+    }
 
 }
