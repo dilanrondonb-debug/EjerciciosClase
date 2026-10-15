@@ -1,0 +1,19 @@
+package co.edu.uniquindio.poo.model2;
+
+public class envioNacional extends envio{
+    private final double costoFijo=6000;
+    private String ciudadDestino;
+    private boolean entregaADomicilio;
+        public envioNacional(String codigo, String destinatario, float peso,
+                     String ciudadDestino, boolean entregaADomicilio) {
+        super(codigo, destinatario, peso);
+        this.ciudadDestino = ciudadDestino;
+        this.entregaADomicilio = entregaADomicilio;
+        }
+    @Override
+    public double obtenerCostoEnvio(){
+    double costo=costoFijo+2000*getPeso();
+    if (entregaADomicilio) costo=costo+3000;
+    return costo;
+    }
+}
