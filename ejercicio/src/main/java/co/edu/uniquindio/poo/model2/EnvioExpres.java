@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo.model2;
 
-public class envioExpres extends envioNacional {
+public class EnvioExpres extends EnvioNacional {
     private final int horasMaximas;
-    public envioExpres(String codigo, String destinatario, float peso,
+    public EnvioExpres(String codigo, String destinatario, float peso,
                        String ciudadDestino, boolean entregaADomicilio, int horasMaximas) {
         super(codigo, destinatario, peso, ciudadDestino, entregaADomicilio);
         this.horasMaximas=horasMaximas;
@@ -15,7 +15,4 @@ public class envioExpres extends envioNacional {
         return costoFinal;
 
     }
-
-
-
 }

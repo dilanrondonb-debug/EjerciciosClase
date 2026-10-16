@@ -1,10 +1,10 @@
 package co.edu.uniquindio.poo.model2;
 
-public class envioInternacional extends envio{
-    private final double costoFijo=15000;
+public class EnvioInternacional extends Envio{
+    private final short costoFijo=15000;
     private final String paisDestino;
     private final boolean necesitaSeguro;
-    public envioInternacional(String codigo, String destinatario, float peso,
+    public EnvioInternacional(String codigo, String destinatario, float peso,
                               String paisDestino, boolean necesitaSeguro) {
         super(codigo, destinatario, peso);
         this.paisDestino=paisDestino;
